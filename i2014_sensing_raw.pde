@@ -17,8 +17,6 @@ void setup() {
   line_chart_s = new LineChart(history, #00ff00);
   line_chart_t = new LineChart(history, #ff0000);
   clock = new AnalogClock(50, 50, 40);
-  
-  background(0, 0, 0);
 }
 
 void draw() {
@@ -40,9 +38,8 @@ void draw() {
       current_idx = 0;
     }
   }
-
-  fill(0, 100 * fire_counter / 30, 100 * fire_counter / 30);
-  rect(0, 0, width, height);
+  
+  background(0, 100 * fire_counter / 30, 100 * fire_counter / 30);
   
   line_chart_s.draw();
   line_chart_t.draw();
